@@ -16,11 +16,13 @@ def getMonthStartDay(year, month):
     return datetime.date(year, month, 1).weekday()
 
 def generateCalendar(core):
-    buttonList = []
-    emptyImage = tk.PhotoImage(height=0, width=0)
+    frameList = []
     for i in range(6):
         coloumn = []
         for x in range(7):
-            coloumn.append(tk.Button(core, text="Test", relief="flat", height = 50, width = 100, image=emptyImage, compound="center", borderwidth=0))
-        buttonList.append(coloumn)
-    return buttonList
+            coloumn.append(tk.Frame(core, height = 50, width = 100))
+        frameList.append(coloumn)
+    return frameList
+
+def testFunc():
+    print("Test output")
